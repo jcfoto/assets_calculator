@@ -36,7 +36,7 @@ window.Webflow.push(() => {
 
     const formData = new FormData(form);
     const amount = formData.get('amount'); // returning the value of amount
-    const interest = formData.get('interest');
+    const interest = parseFloat(formData.get('interest'));
     const term = formData.get('term');
 
     if (!amount || !interest || !term) return;
